@@ -31,6 +31,7 @@
         <spring-cloud.version>2022.0.2</spring-cloud.version>
         <io-micrometer.version>1.0.4</io-micrometer.version>
         <zipkin.version>2.16.4</zipkin.version>
+        <spring.cloud.version>4.0.3</spring.cloud.version>
     </properties>
 
     <dependencyManagement>
@@ -63,6 +64,22 @@
                 <groupId>io.zipkin.reporter2</groupId>
                 <artifactId>zipkin-reporter-brave</artifactId>
                 <version>${zipkin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>${spring.cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-config</artifactId>
+                <version>${spring.cloud.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-bootstrap</artifactId>
+                <version>${spring.cloud.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
