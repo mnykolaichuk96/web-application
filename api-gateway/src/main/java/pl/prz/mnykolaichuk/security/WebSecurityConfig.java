@@ -24,6 +24,7 @@ public class WebSecurityConfig {
                 .pathMatchers( "/api/anonymous/**").permitAll()
                 .pathMatchers("/api/admin", "/api/admin/**").hasRole(ADMIN)
                 .pathMatchers("/api/order", "/api/order**").hasAnyRole(ADMIN, USER)
+                .pathMatchers("/api/inventory", "/api/inventory/**").hasAnyRole(ADMIN)
                 .anyExchange().authenticated()
                 .and()
                 .csrf().disable()       // відключаємо захист від CSRF-атак. Because we test from postman, to have access

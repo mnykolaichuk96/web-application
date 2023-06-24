@@ -4,36 +4,65 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9948aa6-760c-4125-885d-32528b1463ed" name="Changes" comment="Inventory Service">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/pl/prz/mnykolaichuk/model/dto/request/DecrementQuantityRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/configuration/FeignClientConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/model/dto/OrderLineItemsDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/model/dto/OrderRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/model/dto/request/DecrementQuantityRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/model/dto/response/IsInStockResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/model/dto/response/OrderResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/model/entity/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/model/entity/OrderLineItems.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/model/mapper/BaseMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/model/mapper/OrderLineItemsMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/repository/OrderLineItemsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/repository/OrderRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/service/rest/client/InventoryFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="c9948aa6-760c-4125-885d-32528b1463ed" name="Changes" comment="OrderController.getOrderListByUserId&#10;OrderController.placeOrder">
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/pl/prz/mnykolaichuk/security/JwtHeadersFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/pl/prz/mnykolaichuk/config/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/pl/prz/mnykolaichuk/model/dto/InventoryDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/pl/prz/mnykolaichuk/model/dto/request/InventoryRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/pl/prz/mnykolaichuk/model/dto/response/QuantityResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/pl/prz/mnykolaichuk/model/mapper/InventoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/messages/error-messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/messages/error-messages_pl_PL.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/messages/error-messages_uk_UA.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/messages/success-messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/messages/success-messages_pl_PL.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/messages/success-messages_uk_UA.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-keycloak/#innodb_temp/temp_1.ibt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-keycloak/#innodb_temp/temp_10.ibt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-keycloak/#innodb_temp/temp_2.ibt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-keycloak/#innodb_temp/temp_3.ibt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-keycloak/#innodb_temp/temp_4.ibt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-keycloak/#innodb_temp/temp_5.ibt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-keycloak/#innodb_temp/temp_6.ibt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-keycloak/#innodb_temp/temp_7.ibt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-keycloak/#innodb_temp/temp_8.ibt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-keycloak/#innodb_temp/temp_9.ibt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-keycloak/binlog.000006" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-keycloak/ibtmp1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/configuration/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/controller/AdminOrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/model/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/model/dto/response/QuantityResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/service/AdminOrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/service/rest/client/AdminOrderFeignClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/messages/error-messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/messages/error-messages_pl_PL.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/messages/error-messages_uk_UA.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/messages/success-messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/messages/success-messages_pl_PL.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/messages/success-messages_uk_UA.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/realms/realm-export.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/pl/prz/mnykolaichuk/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/pl/prz/mnykolaichuk/security/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/pl/prz/mnykolaichuk/controller/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/pl/prz/mnykolaichuk/controller/InventoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/pl/prz/mnykolaichuk/model/entity/InventoryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/pl/prz/mnykolaichuk/model/entity/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/pl/prz/mnykolaichuk/repository/InventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/pl/prz/mnykolaichuk/repository/InventoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/pl/prz/mnykolaichuk/model/entity/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/pl/prz/mnykolaichuk/model/entity/Inventory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/pl/prz/mnykolaichuk/service/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/pl/prz/mnykolaichuk/service/InventoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/OrderServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/model/dto/request/DecrementQuantityRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/model/dto/request/InventoryRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/repository/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/service/rest/client/InventoryFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/service/rest/client/InventoryFeignClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/pl/prz/mnykolaichuk/UserServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/pl/prz/mnykolaichuk/controller/TestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +72,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -56,14 +85,30 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
     </option>
   </component>
   <component name="ProblemsViewState">
@@ -87,18 +132,20 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TODO_SCOPE": "All Places",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/kolya/OneDrive/Documents/IdeaProjects/web-application/order-service/src/main/java/pl/prz/mnykolaichuk/model",
+    "last_opened_file_path": "C:/Users/kolya/OneDrive/Documents/IdeaProjects/Study/ProjecAppWeb – копія",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "MavenSettings",
-    "spring.configuration.checksum": "83ed2fae3a3f556fbfbe57b1699dea47",
+    "spring.configuration.checksum": "d81fec61e8b840347cd3d984e3a03ee1",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -111,22 +158,29 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="pl.prz.mnykolaichuk.model.dto.response" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kolya\OneDrive\Documents\IdeaProjects\web-application\order-service\src\main\resources" />
+      <recent name="C:\Users\kolya\OneDrive\Documents\IdeaProjects\web-application\inventory-service\src\main\resources\messages" />
       <recent name="C:\Users\kolya\OneDrive\Documents\IdeaProjects\web-application\order-service\src\main\java\pl\prz\mnykolaichuk\model" />
       <recent name="C:\Users\kolya\OneDrive\Documents\IdeaProjects\web-application\order-service\src\main\java\pl\prz\mnykolaichuk" />
       <recent name="C:\Users\kolya\OneDrive\Documents\IdeaProjects\web-application\api-gateway\src\main\java\pl\prz\mnykolaichuk" />
-      <recent name="C:\Users\kolya\OneDrive\Documents\IdeaProjects\web-application\user-service\src\main\java\pl\prz\mnykolaichuk" />
-      <recent name="C:\Users\kolya\OneDrive\Documents\IdeaProjects\web-application\discovery-server\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kolya\OneDrive\Documents\IdeaProjects\web-application\inventory-service\src\main\resources\messages" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="pl.prz.mnykolaichuk.model.dto.request" />
       <recent name="pl.prz.mnykolaichuk.model.dto.res" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pl.prz.mnykolaichuk.configuration" />
+      <recent name="pl.prz.mnykolaichuk.model.dto.response" />
+      <recent name="pl.prz.mnykolaichuk.model.mapper" />
       <recent name="pl.prz.mnykolaichuk.model.dto.request" />
       <recent name="pl.prz.mnykolaichuk.model.dto" />
-      <recent name="pl.prz.mnykolaichuk.model.entity.dto.response" />
-      <recent name="pl.prz.mnykolaichuk.model.entity.mapper" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -136,10 +190,23 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.OrderServiceApplication">
+  <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="pl.prz.mnykolaichuk.ApiGatewayApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.prz.mnykolaichuk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiscoveryServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="discovery-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="pl.prz.mnykolaichuk.DiscoveryServerApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="pl.prz.mnykolaichuk.*" />
@@ -176,31 +243,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="user-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="pl.prz.mnykolaichuk.UserServiceApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pl.prz.mnykolaichuk.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Spring Boot.InventoryServiceApplication" />
+      <item itemvalue="Spring Boot.DiscoveryServerApplication" />
       <item itemvalue="Spring Boot.ApiGatewayApplication" />
+      <item itemvalue="Spring Boot.InventoryServiceApplication" />
       <item itemvalue="Spring Boot.OrderServiceApplication" />
-      <item itemvalue="Spring Boot.UserServiceApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.OrderServiceApplication" />
         <item itemvalue="Spring Boot.ApiGatewayApplication" />
+        <item itemvalue="Spring Boot.OrderServiceApplication" />
         <item itemvalue="Spring Boot.InventoryServiceApplication" />
-        <item itemvalue="Spring Boot.UserServiceApplication" />
+        <item itemvalue="Spring Boot.DiscoveryServerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -221,7 +275,16 @@
       <workItem from="1686942614280" duration="6984000" />
       <workItem from="1686951036382" duration="2389000" />
       <workItem from="1686953435445" duration="382000" />
-      <workItem from="1686954072065" duration="20825000" />
+      <workItem from="1686954072065" duration="23246000" />
+      <workItem from="1687086143123" duration="4172000" />
+      <workItem from="1687096653703" duration="2117000" />
+      <workItem from="1687098937362" duration="4557000" />
+      <workItem from="1687184315864" duration="3898000" />
+      <workItem from="1687327109160" duration="5033000" />
+      <workItem from="1687432051875" duration="97000" />
+      <workItem from="1687433457016" duration="6286000" />
+      <workItem from="1687445449692" duration="18109000" />
+      <workItem from="1687507563240" duration="13384000" />
     </task>
     <task id="LOCAL-00001" summary="DiscoveryServerApplication&#10;ApiGatewayApplication with keycloak security, temp add userId, email from jwt to headers before proxy request&#10;temp UserServiceApplication only test purpose&#10;OrderServiceApplication">
       <created>1686948011565</created>
@@ -237,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686956395587</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="OrderController.getOrderListByUserId&#10;OrderController.placeOrder">
+      <created>1687081666750</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1687081666750</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,97 +328,60 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="DiscoveryServerApplication&#10;ApiGatewayApplication with keycloak security, temp add userId, email from jwt to headers before proxy request&#10;temp UserServiceApplication only test purpose&#10;OrderServiceApplication" />
     <MESSAGE value="Inventory Service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inventory Service" />
+    <MESSAGE value="OrderController.getOrderListByUserId&#10;OrderController.placeOrder" />
+    <option name="LAST_COMMIT_MESSAGE" value="OrderController.getOrderListByUserId&#10;OrderController.placeOrder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/user-service/src/main/java/pl/prz/mnykolaichuk/controller/TestController.java</url>
-          <line>16</line>
+          <line>19</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/user-service/src/main/java/pl/prz/mnykolaichuk/controller/TestController.java</url>
-          <line>27</line>
+          <line>28</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/user-service/src/main/java/pl/prz/mnykolaichuk/controller/TestController.java</url>
-          <line>24</line>
+          <line>26</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/user-service/src/main/java/pl/prz/mnykolaichuk/controller/TestController.java</url>
-          <line>21</line>
+          <line>24</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/user-service/src/main/java/pl/prz/mnykolaichuk/controller/TestController.java</url>
-          <line>18</line>
+          <line>21</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/inventory-service/src/main/java/pl/prz/mnykolaichuk/controller/InventoryController.java</url>
+          <url>file://$PROJECT_DIR$/api-gateway/src/main/java/pl/prz/mnykolaichuk/security/JwtHeadersFilter.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/api-gateway/src/main/java/pl/prz/mnykolaichuk/security/JwtHeadersFilter.java</url>
           <line>19</line>
-          <option name="timeStamp" value="46" />
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/inventory-service/src/main/java/pl/prz/mnykolaichuk/service/InventoryService.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/service/OrderService.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/service/OrderService.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/service/OrderService.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/inventory-service/src/main/java/pl/prz/mnykolaichuk/controller/InventoryController.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/service/OrderService.java</url>
-          <line>64</line>
-          <option name="timeStamp" value="58" />
+          <url>file://$PROJECT_DIR$/api-gateway/src/main/java/pl/prz/mnykolaichuk/security/JwtHeadersFilter.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/user-service/src/main/java/pl/prz/mnykolaichuk/controller/TestController.java</url>
-          <line>22</line>
-          <properties class="pl.prz.mnykolaichuk.controller.TestController" method="getAdmin">
+          <line>25</line>
+          <properties class="pl.prz.mnykolaichuk.controller.TestController">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/inventory-service/src/main/java/pl/prz/mnykolaichuk/controller/InventoryController.java</url>
-          <line>20</line>
-          <properties class="pl.prz.mnykolaichuk.controller.InventoryController" method="isInStock">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/inventory-service/src/main/java/pl/prz/mnykolaichuk/service/InventoryService.java</url>
-          <line>19</line>
-          <properties class="pl.prz.mnykolaichuk.service.InventoryService" method="isInStock">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="49" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

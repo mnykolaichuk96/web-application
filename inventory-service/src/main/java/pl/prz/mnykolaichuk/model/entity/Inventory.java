@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "Inventory")
+@Table(name = "inventory")
 @Getter
 @Setter
 @Builder
@@ -14,6 +14,7 @@ public class Inventory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(unique = true)
     private String skuCode;
     private Integer quantity;
 }

@@ -2,9 +2,11 @@ package pl.prz.mnykolaichuk.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import pl.prz.mnykolaichuk.model.dto.request.DecrementQuantityRequest;
+import pl.prz.mnykolaichuk.model.dto.request.InventoryRequest;
 import pl.prz.mnykolaichuk.model.dto.response.IsInStockResponse;
+import pl.prz.mnykolaichuk.model.dto.response.QuantityResponse;
 import pl.prz.mnykolaichuk.service.InventoryService;
 
 import java.util.List;
@@ -21,9 +23,21 @@ public class InventoryController {
     public List<IsInStockResponse> isInStock(@RequestParam List<String> skuCodeList) {
         return inventoryService.isInStock(skuCodeList);
     }
-    @PostMapping("/quantity")
+    @GetMapping("/quantity")
     @ResponseStatus(HttpStatus.OK)
-    public String decrementQuantity(@RequestBody List<DecrementQuantityRequest> decrementQuantityRequestList) {
-        return inventoryService.decrementQuantity(decrementQuantityRequestList);
+    public List<QuantityResponse> getQuantity(@RequestParam List<String> skuCodeList) {
+        return inventoryService.getQuantity(skuCodeList);
+    }
+
+    @PostMapping("/add")
+    public ResponseEntity<String> placeInventory(@RequestBody List<InventoryRequest> inventoryRequestList) {
+        return
+                inventoryService.placeInventory(inventoryRequestList);
+    }
+
+    @PostMapping("/update")
+    public ResponseEntity<String> updateInventory(@RequestBody List<InventoryRequest> inventoryRequestList) {
+        return
+                inventoryService.placeInventory(inventoryRequestList);
     }
 }
