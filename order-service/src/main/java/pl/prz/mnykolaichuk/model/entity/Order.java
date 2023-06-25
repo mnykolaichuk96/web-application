@@ -20,10 +20,9 @@ public class Order {
     private String orderNumber;
     @Column(length = 36)
     private String userId;
-    @OneToMany(mappedBy = "order",
-            cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "order", fetch = FetchType.LAZY)
+    private List<OrderLineItems> orderLineItemsList;
     //For create only 2 tables not three
     //https://vladmihalcea.com/the-best-way-to-map-a-onetomany-association-with-jpa-and-hibernate/
-//    @JoinColumn(name = "order_id")
-    private List<OrderLineItems> orderLineItemsList;
+
 }

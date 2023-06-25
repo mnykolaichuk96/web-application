@@ -1,0 +1,22 @@
+FROM eclipse-temurin:latest AS builder
+WORKDIR extracted
+COPY target/*.jar app.jar
+# Щоб не перебудовувати цлий image в разі дрібних змін в коді
+# This command will extract all leyers from .jar and store into variables belove
+RUN java -Djarmode=layertools -jar app.jar extract
+
+FROM eclipse-temurin:latest
+WORKDIR application
+COPY --from=builder extracted/dependencies/ ./
+COPY --from=builder extracted/spring-boot-loader/ ./
+COPY --from=builder extracted/snapshot-dependencies/ ./
+COPY --from=builder extracted/application/ ./
+#COPY src/main/resources/application-docker.properties ./config/
+
+EXPOSE 8761
+ENTRYPOINT ["java", "org.springframework.boot.loader.JarLauncher"]
+
+# For building docker build -t mnykolaichuk/api-gateway:version -f Dockerfile.layered .
+# -t -- tag
+# -f Dockerfile.layered -- change default Dockerfile to Dockerfile.layered
+# . -- location in current directory

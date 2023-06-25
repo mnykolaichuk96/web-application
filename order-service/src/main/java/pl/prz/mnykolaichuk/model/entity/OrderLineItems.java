@@ -23,6 +23,7 @@ public class OrderLineItems {
     @Column(name = "quantity")
     private Integer quantity;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
+    @JoinColumn(name = "order_id")
     private Order order;
 }
