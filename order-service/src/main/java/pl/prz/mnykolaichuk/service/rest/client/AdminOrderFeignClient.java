@@ -8,8 +8,9 @@ import pl.prz.mnykolaichuk.configuration.FeignClientConfiguration;
 
 import java.util.HashMap;
 
-@FeignClient(value = "keycloak-client", url = "http://localhost:8181", configuration = FeignClientConfiguration.class)
+@FeignClient(value = "keycloak-client", url = "${spring.cloud.openfeign.client.config.postClient.url}", configuration = FeignClientConfiguration.class)
 public interface AdminOrderFeignClient {
+
     @GetMapping(path = "/auth/admin/realms/web-application-realm/users/{user-id}")
     HashMap<String, Object> getUserInfo(@PathVariable("user-id") String userId,
                                         @RequestHeader("Authorization") String authorizationHeader);
