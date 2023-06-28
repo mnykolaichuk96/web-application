@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9948aa6-760c-4125-885d-32528b1463ed" name="Changes" comment="api-gateway docker redirect uri change">
+    <list default="true" id="c9948aa6-760c-4125-885d-32528b1463ed" name="Changes" comment="OrderService debug save order">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysql-inventory/#ib_16384_0.dblwr" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-inventory/#ib_16384_0.dblwr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysql-inventory/#innodb_redo/#ib_redo10" beforeDir="false" afterPath="$PROJECT_DIR$/mysql-inventory/#innodb_redo/#ib_redo10" afterDir="false" />
@@ -280,7 +280,7 @@
       <workItem from="1687852366324" duration="1435000" />
       <workItem from="1687861177844" duration="788000" />
       <workItem from="1687892140626" duration="3630000" />
-      <workItem from="1687960472082" duration="5427000" />
+      <workItem from="1687960472082" duration="7823000" />
     </task>
     <task id="LOCAL-00001" summary="DiscoveryServerApplication&#10;ApiGatewayApplication with keycloak security, temp add userId, email from jwt to headers before proxy request&#10;temp UserServiceApplication only test purpose&#10;OrderServiceApplication">
       <created>1686948011565</created>
@@ -317,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687685230297</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="OrderService debug save order">
+      <created>1687968218951</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1687968218951</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +349,8 @@
     <MESSAGE value="getUserOrderId&#10;placeOrder&#10;getOrderListByUserId" />
     <MESSAGE value="docker compose deploy" />
     <MESSAGE value="api-gateway docker redirect uri change" />
-    <option name="LAST_COMMIT_MESSAGE" value="api-gateway docker redirect uri change" />
+    <MESSAGE value="OrderService debug save order" />
+    <option name="LAST_COMMIT_MESSAGE" value="OrderService debug save order" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -416,16 +424,6 @@
           <url>file://$PROJECT_DIR$/api-gateway/src/main/java/pl/prz/mnykolaichuk/security/JwtAuthConverter.java</url>
           <line>58</line>
           <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/service/OrderService.java</url>
-          <line>74</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/order-service/src/main/java/pl/prz/mnykolaichuk/service/OrderService.java</url>
-          <line>76</line>
-          <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/user-service/src/main/java/pl/prz/mnykolaichuk/controller/TestController.java</url>
